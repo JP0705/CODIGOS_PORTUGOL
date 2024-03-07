@@ -4,44 +4,44 @@ programa
 {
 	inclua biblioteca Util --> u
 
-	inteiro i, quant= 10, vet[40], soma= 0
+	inteiro i, quant= 10, vet[100], soma= 0
 
 
 	
 	
 	funcao inicio()
 	{
-
-		para(i = 0; i < quant; i++)
-      	vet[i] = Util.sorteia(0,10)
-
-		para(i = 0; i < quant; i++){
-			soma = soma+vet[i]
-			}
-			
+		sorteio()
+		somar()
+		libera_espaco()
+		sorteio()
 		
-		se (soma <= 30) {
-				quant = 20
-		}senao
-
-		se (soma <= 40) {
-				quant = 30
-		}senao
-		
-		se (soma > 41) {
-				quant = 40
-		}
-		
-
-			  
-		para(i = 0; i < quant; i++)
-      	vet[i] = Util.sorteia(0,10)
-
-			    	
-
       	escreva("\n")
     		para(i = 0; i < quant; i++)
       	escreva(vet[i], ",")
 	}
 	
+	funcao sorteio(){
+		para(i = 0; i < quant; i++)
+      	vet[i] = Util.sorteia(0,10)
+		}
+
+	funcao libera_espaco(){
+			se (soma <= 30) {
+					quant = 20
+			}senao
+
+			se (soma <= 40) {
+					quant = 40
+			}senao
+		
+			se (soma > 41) {
+					quant = 80
+			}
+		}
+	funcao somar(){
+			para(i = 0; i < quant; i++){
+				soma = soma+vet[i]
+			}
+		}
 }
