@@ -1,0 +1,47 @@
+//Teste aleatorio 3:00am
+
+programa
+{
+	inclua biblioteca Util --> u
+
+	inteiro i, quant= 10, vet[40], soma= 0
+
+
+	
+	
+	funcao inicio()
+	{
+
+		para(i = 0; i < quant; i++)
+      	vet[i] = Util.sorteia(0,10)
+
+		para(i = 0; i < quant; i++){
+			soma = soma+vet[i]
+			}
+			
+		
+		se (soma <= 30) {
+				quant = 20
+		}senao
+
+		se (soma <= 40) {
+				quant = 30
+		}senao
+		
+		se (soma > 41) {
+				quant = 40
+		}
+		
+
+			  
+		para(i = 0; i < quant; i++)
+      	vet[i] = Util.sorteia(0,10)
+
+			    	
+
+      	escreva("\n")
+    		para(i = 0; i < quant; i++)
+      	escreva(vet[i], ",")
+	}
+	
+}
